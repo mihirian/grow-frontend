@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'grow-frontend';
+  header: boolean=true;   
+  public showLoader = true;
+
 }

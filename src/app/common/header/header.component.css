@@ -1,0 +1,133 @@
+.custom-toolbar {
+    background-color: #ffffff;
+    padding: 30px;
+    height: 70px;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .custom-toolbar a {
+    color: var(--theme );
+    font-size: 15px;
+    font-weight: 450;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+  
+  .custom-toolbar .mat-icon {
+    color: black;
+    transform: scale(1.4);
+  }
+  
+  :host ::ng-deep .mat-button:hover,
+  mat-icon-button:hover {
+    border-radius: 10px;
+  }
+  
+  .mat-button {
+    line-height: 20px;
+  }
+  
+  .mat-drawer-inner-container {
+    overflow: hidden !important;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  
+  /* profile menue */
+  .profile-menu {
+    display: inline-flex;
+    flex-direction: column;
+    min-width: 180px;
+    max-width: 280px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  a:hover,
+  a:visited,
+  a:link,
+  a:active {
+    font-size: 13px;
+    color: #3f51b5;
+    text-decoration: none;
+  }
+  
+  .profile-menu a {
+    font-size: 16px;
+    color: #3f51b5;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-bottom: 1px solid #cccccc;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .profile-menu a:hover {
+    cursor: pointer;
+    background-color: white;
+  }
+  
+  .profile-item:hover {
+    background-color: white;
+  }
+  
+  .profile-menu .profile-trigger {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    user-select: none;
+    line-height: 36px;
+    padding: 0 16px;
+    font-size: small;
+    align-items: center;
+    flex-direction: row;
+    flex: 1;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .profile-menu .profile-trigger:hover {
+    background-color: rgba(224, 224, 224, 0.5);
+  }
+  
+  .profile-menu .profile-item {
+    background-color: rgba(245, 245, 245, 0.5);
+  }
+  
+  
+  @media (max-width: 599px) {
+    .custom-toolbar {
+      padding: 0px;
+    }
+    .custom-toolbar-child {
+      border: 1px solid red;
+      margin-left: 2.5%;
+    }
+    .mat-icon {
+      margin-top: 14px;
+      margin-left: 3.3%;
+    }
+   
+    /* .nav_logo {
+      height: 2.4rem;
+      margin-top: 2.3%;
+    } */
+    .wallet_text {
+      font-size: 12px;
+    }
+    .wallet_text ~ div {
+      font-size: 14px;
+    }
+  }
+  

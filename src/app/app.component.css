@@ -1,0 +1,44 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F7FF;
+    overflow: auto;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Material Form Fields */
+  .mat-form-field {
+    border-radius: 15px;
+    width: 95%;
+  }
+  
+  .mat-form-field-outline-start {
+    border-radius: 28px 0 0 28px !important;
+    min-width: 28px !important;
+  }
+  
+  .mat-form-field-outline-end {
+    border-radius: 0 28px 28px 0 !important;
+  }
+  
+  /* Material Icons */
+  .mat-icon {
+    font-size: 24px !important;
+  }
+  
+  /* Material Cards */
+  .mat-card {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 20px;
+  }
+  
+  /* Custom Colors */
+  :root {
+    --theme: #4B49AC;
+    --box-heading: #8786df;
+  }
+  
