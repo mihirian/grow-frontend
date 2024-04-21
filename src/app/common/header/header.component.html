@@ -1,1 +1,27 @@
-<p>header works!</p>
+<mat-toolbar  class="custom-toolbar" (mouseover)="isActive=true" (mouseout)="isActive=false"
+  [class.mat-elevation-z1]="!isActive" [class.mat-elevation-z6]="isActive">
+  <div fxFlex fxLayout="row wrap"  >
+   
+    <!-- <button mat-icon-button [@rotatedState]='state' [autofocus]="false" style="margin-bottom: 10px;"> -->
+    <!-- </button> -->
+    <img [src]="dynamicLogoUrl" class="angular-logo" style="height: 40px; " />
+    <span class="example-spacer"></span>
+
+
+
+    
+    <div fxLayout="row"  fxLayoutAlign="space-around" fxLayoutGap="20px">
+     
+
+   
+
+
+
+
+     
+    </div>
+
+
+  </div>
+
+</mat-toolbar>

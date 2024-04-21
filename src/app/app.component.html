@@ -1,7 +1,7 @@
 <ng-http-loader *ngIf="showLoader"></ng-http-loader>
-<app-header>
+<app-header *ngIf="header">
 </app-header>
-<!-- <div fxLayout="row">
+<div fxLayout="row">
     <div fxLayout="column" fxFlex="100">
        
         <app-drawer></app-drawer>
@@ -9,7 +9,3 @@
     </div>
   
 </div>
-
- <app-footer *ngIf="header&&!showanim" >
-</app-footer> 
-   -->

@@ -1,0 +1,21 @@
+<mat-drawer-container style="height: 100vh;">
+  <mat-drawer [opened]="opened" #drawer mode="side" class="example-drawer">
+    <mat-nav-list>
+      <div fxlayout="column">
+        <mat-button-toggle-group [hideSingleSelectionIndicator]="true" [formControl]="drawerButtonControl" fxLayout="column" vertical>
+          <mat-button-toggle (click)="sidebuttonindex();">
+            <mat-icon style="margin-right: 10px;">dashboard</mat-icon>Dashboard
+          </mat-button-toggle>
+          <mat-button-toggle *ngFor="let item of allowedServicesList; let i = index" [value]="item.link" [routerLink]="item.link" style="padding: 0px;">
+            <mat-icon style="margin-right: 10px;">{{ item.menuIcon }}</mat-icon>{{ item.displayName }}
+          </mat-button-toggle>
+        </mat-button-toggle-group>
+      </div>
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div style="height: 100vh; overflow-y: auto; background-image: url('assets/images/bg1.jpg'); background-size: 100% 100%; padding: 10px;">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

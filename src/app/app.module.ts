@@ -20,12 +20,14 @@ import { IvyCarouselModule } from 'angular-responsive-carousel';
 import { SwiperModule } from 'swiper/angular';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { HeaderComponent } from './common/header/header.component';
+import { DrawerComponent } from './common/drawer/drawer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    DrawerComponent
   ],
   imports: [
     BrowserModule,
