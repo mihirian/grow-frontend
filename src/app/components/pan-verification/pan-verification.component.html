@@ -1,0 +1,15 @@
+
+<mat-card  class="pan-verification-card" fxLayout="column" fxLayoutAlign="center center" style="height: fit-content;padding: 35px;margin: 10px;border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); background-color: #fff;color: black; padding: 20px;" ngStyle.xs="padding:10px 0px;margin: 0px">
+   <h2>PAN Verification</h2>
+  
+  <!-- Input field for PAN verification -->
+<mat-form-field appearance="outline" class="pan-input">
+  <mat-label>Enter PAN Number</mat-label>
+  <input matInput placeholder="PAN Number" autocomplete="off" class="pan-input-field"
+         style="color: #333; "> <!-- Adjust color values as needed -->
+  <!-- You can add more input field attributes as needed -->
+</mat-form-field>
+
+  <!-- Additional content or action button -->
+  <button mat-raised-button color="primary" class="verify-button">Verify PAN</button>
+  </mat-card>

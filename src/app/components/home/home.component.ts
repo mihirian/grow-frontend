@@ -4,6 +4,7 @@ import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { DraweritemsService } from '../../common/drawer/draweritems.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -23,7 +24,8 @@ constructor(
   public dialog: MatDialog,
   fb: FormBuilder,
   private sheet: MatBottomSheet,
-  private cdr: ChangeDetectorRef) { }
+  private cdr: ChangeDetectorRef,
+  private router:Router) { }
 
   ngOnInit(): void {
     this.bbpsDataList=this.drawerService.allowedServicesList;
@@ -45,10 +47,9 @@ randomChannel(brightness:any){
 selectService(service:any){
   console.log(service);
   
-  this.openService(service.name);
+  this.router.navigate([service.link]);
+
 }
-  openService(name: any) {
-    throw new Error('Method not implemented.');
-  }
+  
 
 }
