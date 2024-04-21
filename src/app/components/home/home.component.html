@@ -1,0 +1,81 @@
+<mat-card style="height: fit-content;padding: 35px;margin: 10px;" ngStyle.xs="padding:10px 0px;margin: 0px">
+    
+    <div
+    fxLayout="column"
+    class="bbps"
+    fxLayoutAlign="space-around"
+    fxLayoutGap="20px"
+    style="margin-top: 35px; margin-right: 25px"
+  >
+    <div fxLayout="column">
+      <div fxLayout="row" style="margin-top: -40px; margin-bottom: 30px">
+        <mat-form-field appearance="outline" style="width: 400px; color:white">
+          <input
+            matInput
+            placeholder="Search Here"
+            [(ngModel)]="searchText"
+            name="Search"
+            required
+          />
+  
+          <mat-icon matPrefix style="padding: 10px">search</mat-icon>
+        </mat-form-field>
+      </div>
+      <mat-grid-list cols="4" fxHide.xs="hide"  rowHeight="2:1" [gutterSize]="'15px'" >
+        <mat-grid-tile
+          *ngFor="let tile of bbpsDataList | filter: searchText"
+          (click)="selectService(tile)"
+          [style.background]="this.randomColor(150)"
+          style="
+            border: 1px solid #4b49ac;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16),
+              0 0 0 1px rgba(0, 0, 0, 0.08);
+          "
+        >
+          <div fxLayout="column" fxLayoutGap="20px" fxLayoutAlign="center center">
+            <div fxLayout="row" fxLayoutAlign="center center">
+              <img src="assets/images/grow.jpg" alt="img" width="40" />
+            </div>
+            <div
+              fxLayout="row"
+              fxLayoutAlign="center center"
+              style="font-weight: 500"
+            >
+              {{ tile.displayName }}
+            </div>
+          </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+  
+      <mat-grid-list cols="2" fxHide.gt-xs="hide"  rowHeight="2:2" [gutterSize]="'25px'" >
+        <mat-grid-tile
+          *ngFor="let tile of bbpsDataList | filter: searchText"
+          (click)="selectService(tile)"
+          [style.background]="this.randomColor(200)"
+          style="
+            border: 1px solid #4b49ac;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16),
+              0 0 0 1px rgba(0, 0, 0, 0.08);
+          "
+        >
+          <div fxLayout="column" fxLayoutGap="20px" fxLayoutAlign="center center">
+            <div fxLayout="row" fxLayoutAlign="center center">
+              <img src="assets/images/grow.jpg" alt="img" width="40" />
+            </div>
+            <div
+              fxLayout="row"
+              fxLayoutAlign="center center"
+              style="font-weight: 800"
+            >
+              {{ tile.displayName }}
+            </div>
+          </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+    <div fxLayout="row">
+      <img src="assets/images/grow.jpg" style="width: 150px" />
+    </div>
+  </div>
+      
+ </mat-card>
