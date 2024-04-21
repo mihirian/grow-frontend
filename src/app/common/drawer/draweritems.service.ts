@@ -11,7 +11,7 @@ export class DraweritemsService {
         link: "/aadhaarVerification",
         menuIcon: "fingerprint", // Angular Material Icon for fingerprint
         dashboardIcon: 'static/verificationIcon.png',
-        dashboardColor: 'small-box bg3',
+        iconUrl: 'assets/images/grow.jpg',
     },
     {
         displayName: "PAN Verification",

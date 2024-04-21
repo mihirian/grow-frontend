@@ -3,7 +3,7 @@
     <mat-nav-list>
       <div fxlayout="column">
         <mat-button-toggle-group [hideSingleSelectionIndicator]="true" [formControl]="drawerButtonControl" fxLayout="column" vertical>
-          <mat-button-toggle (click)="sidebuttonindex();">
+          <mat-button-toggle (click)="sidebuttonindex();" value="/" [routerLink]="'/'">
             <mat-icon style="margin-right: 10px;">dashboard</mat-icon>Dashboard
           </mat-button-toggle>
           <mat-button-toggle *ngFor="let item of allowedServicesList; let i = index" [value]="item.link" [routerLink]="item.link" style="padding: 0px;">
