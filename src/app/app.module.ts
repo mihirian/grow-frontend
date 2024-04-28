@@ -23,6 +23,7 @@ import { HeaderComponent } from './common/header/header.component';
 import { DrawerComponent } from './common/drawer/drawer.component';
 import { HomeComponent } from './components/home/home.component';
 import { PanVerificationComponent } from './components/pan-verification/pan-verification.component';
+import { DynamicDataComponent } from './common/dynamic-data/dynamic-data.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { PanVerificationComponent } from './components/pan-verification/pan-veri
     HeaderComponent,
     DrawerComponent,
     HomeComponent,
-    PanVerificationComponent
+    PanVerificationComponent,
+    DynamicDataComponent
   ],
   imports: [
     BrowserModule,

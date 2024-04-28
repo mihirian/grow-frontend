@@ -1,0 +1,70 @@
+
+.mat-dialog-container {
+    padding: 0px !important;
+    border-radius: 10px !important;
+    border: #000 !important;
+    margin:0px !important;
+    z-index: 999999999999999;
+}
+a{
+    cursor: pointer;
+}
+.disable_ripple:hover{
+    background: #268CD2 !important;
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* .login-otp {
+        width: max-content;
+      }
+       */
+      /* .login-otp-title { */
+        /* padding: 10px;/ */
+        /* margin: -16px;
+        align-content: flex-start;
+        color: white;
+        background-color: #29B13A;
+      }
+      
+      .login-otp-heading {
+        margin-left: 10px;
+        margin-right: 100px;
+      }
+      
+      .login-otp-content {
+        margin-top: 10px;
+        padding: 20px;
+      }
+      
+      .login-otp-scroll {
+        overflow-y: scroll;
+        height: 450px;
+      }
+      
+      .login-otp-panel {
+        width: 820px;
+      }
+      
+      .disable-ripple {
+        pointer-events: none;
+        height: 50px;
+      }
+      
+      .login-otp-question {
+        font-weight: 500;
+      }
+      
+      .login-otp-answer {
+        padding: 10px;
+        margin: 10px;
+      }
+      
+      .login-otp-divider {
+        margin-top: 20px;
+      }
+      
+      .login-otp-actions {
+        margin-top: -26px;
+      }     */

@@ -1,0 +1,41 @@
+<mat-card fxHide.xs="hide" class="login-otp" style="width: max-content;background-color: white;" >
+    <mat-card-title
+        style="padding: 10px;align-content: flex-start;color: white;background-color: #29B13A;">
+        <div fxLayout="row" fxLayoutAlign="space-between">
+            <span style="margin-left: 10px;margin-right: 100px;">FAQ'S</span>
+
+            <a (click)="close()">
+                <mat-icon>close</mat-icon>
+            </a>
+        </div>
+
+    </mat-card-title>
+    <mat-card-content style="margin-top: 10px;padding: 20px;">
+        <div fxLayout="column" fxLayoutAlign="center space-between" style="overflow-y: scroll;height: 500px;">
+            <mat-accordion style="margin-top: 20px;">
+                <mat-expansion-panel *ngFor="let item of modalData" style="width: 820px;">
+                  <mat-expansion-panel-header   class="disable_ripple">
+                    <mat-panel-title style="font-weight: 500;">
+                      {{item.key}}
+                    </mat-panel-title>
+                   
+                  </mat-expansion-panel-header>
+                  <p style="padding: 10px;margin:10px">{{item.value}}</p>
+                </mat-expansion-panel>
+                
+              </mat-accordion>
+        </div>
+      
+        <mat-divider style="margin-top: 20px;color: black;"></mat-divider>
+
+    </mat-card-content>
+    <mat-card-actions style="margin-top: -26px;">
+        <div fxLayout="row"  fxLayoutAlign="end" >
+
+            <button mat-raised-button (click)="close()"  color="warn">Close</button>
+
+        </div>
+
+       
+    </mat-card-actions>
+</mat-card>
