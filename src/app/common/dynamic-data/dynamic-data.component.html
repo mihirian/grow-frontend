@@ -10,25 +10,33 @@
         </div>
 
     </mat-card-title>
-    <mat-card-content style="margin-top: 10px;padding: 20px;">
-        <div fxLayout="column" fxLayoutAlign="center space-between" style="overflow-y: scroll;height: 500px;">
-            <mat-accordion style="margin-top: 20px;">
-                <mat-expansion-panel *ngFor="let item of modalData" style="width: 820px;">
-                  <mat-expansion-panel-header   class="disable_ripple">
-                    <mat-panel-title style="font-weight: 500;">
-                      {{item.key}}
-                    </mat-panel-title>
-                   
-                  </mat-expansion-panel-header>
-                  <p style="padding: 10px;margin:10px">{{item.value}}</p>
-                </mat-expansion-panel>
-                
-              </mat-accordion>
+    <mat-card-content style="margin-top: 10px; padding: 20px;">
+        <div class="table-container">
+          <mat-table #table [dataSource]="modalData" class="elegant-table">
+      
+            <!-- Key Column Definition -->
+            <ng-container matColumnDef="key">
+              <mat-header-cell *matHeaderCellDef> Item </mat-header-cell>
+              <mat-cell *matCellDef="let element" style="font-weight: 450;"> {{element.key}} </mat-cell>
+            </ng-container>
+      
+            <!-- Value Column Definition -->
+            <ng-container matColumnDef="value">
+              <mat-header-cell *matHeaderCellDef> Value </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.value}} </mat-cell>
+            </ng-container>
+      
+            <mat-header-row *matHeaderRowDef="['key', 'value']"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: ['key', 'value'];"></mat-row>
+          </mat-table>
         </div>
       
-        <mat-divider style="margin-top: 20px;color: black;"></mat-divider>
-
-    </mat-card-content>
+        <mat-divider style="margin-top: 20px;"></mat-divider>
+      </mat-card-content>
+      
+      
+      
+      
     <mat-card-actions style="margin-top: -26px;">
         <div fxLayout="row"  fxLayoutAlign="end" >
 

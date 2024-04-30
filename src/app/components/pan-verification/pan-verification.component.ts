@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { PanVerificationService } from './pan-verification.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
@@ -7,7 +7,8 @@ import { DynamicDataComponent } from '../../common/dynamic-data/dynamic-data.com
 @Component({
   selector: 'app-pan-verification',
   templateUrl: './pan-verification.component.html',
-  styleUrl: './pan-verification.component.css'
+  styleUrl: './pan-verification.component.css',
+  encapsulation: ViewEncapsulation.None 
 })
 export class PanVerificationComponent {
 
