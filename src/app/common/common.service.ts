@@ -15,4 +15,7 @@ export class CommonService {
   verifyvoterID(data:any){
     return this._http.post(`${environment.apiUrl}`+"common/voterIdVerif",data);
   }
+  verifypassportId(data:any){
+    return this._http.post(`${environment.apiUrl}`+"common/passportVerif",data);
+  }
 }
