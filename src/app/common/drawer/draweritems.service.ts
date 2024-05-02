@@ -20,13 +20,7 @@ export class DraweritemsService {
         dashboardIcon: 'static/verificationIcon.png',
         dashboardColor: 'small-box bg3',
     },
-    {
-        displayName: "PAN Verification Detailed",
-        link: "/panVerificationDetailed",
-        menuIcon: "credit_card", // Angular Material Icon for credit card
-        dashboardIcon: 'static/verificationIcon.png',
-        dashboardColor: 'small-box bg3',
-    },
+    
     {
         displayName: "Driving License Verification",
         link: "/drivingLicenseVerification",
@@ -76,13 +70,13 @@ export class DraweritemsService {
         dashboardIcon: 'static/verificationIcon.png',
         dashboardColor: 'small-box bg3',
     },
-    {
-        displayName: "Udhyam Aadhaar",
-        link: "/udhyamAadhaar",
-        menuIcon: "business", // Angular Material Icon for business
-        dashboardIcon: 'static/verificationIcon.png',
-        dashboardColor: 'small-box bg3',
-    },
+    // {
+    //     displayName: "Udhyam Aadhaar",
+    //     link: "/udhyamAadhaar",
+    //     menuIcon: "business", // Angular Material Icon for business
+    //     dashboardIcon: 'static/verificationIcon.png',
+    //     dashboardColor: 'small-box bg3',
+    // },
     {
         displayName: "TAN Verification",
         link: "/tanVerification",

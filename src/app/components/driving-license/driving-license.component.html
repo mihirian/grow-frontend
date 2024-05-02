@@ -1,0 +1,37 @@
+<div
+fxLayout="row"
+class="bbps"
+fxLayoutAlign="space-around"
+fxLayoutGap="10px"
+style="margin-top: 35px; margin-right: 25px"
+>
+<mat-card  class="pan-verification-card" fxLayout="column" fxLayoutAlign="center center" style="height: fit-content;padding: 35px;margin: 10px;border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); background-color: #fff;color: black; padding: 20px;" ngStyle.xs="padding:10px 0px;margin: 0px">
+ <h2>Driving License Verification</h2>
+
+<!-- Input field for PAN verification -->
+<mat-form-field appearance="outline" class="pan-input">
+<mat-label>Enter License Number</mat-label>
+<input matInput placeholder="License Number"  [(ngModel)]="drivingLicence" autocomplete="off" class="pan-input-field"
+       style="color: #333; " autofocus (keydown.enter)="drivingLicenceVerify()"> <!-- Adjust color values as needed -->
+<!-- You can add more input field attributes as needed -->
+</mat-form-field>
+
+<mat-form-field appearance="outline" class="dob-input">
+    <mat-label>Enter Date of Birth</mat-label>
+    <input matInput [matDatepicker]="picker" placeholder="YYYY/MM/DD" [(ngModel)]="dob" [max]="maxDate">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker [startAt]="startDate"></mat-datepicker>
+  </mat-form-field>
+
+<!-- Additional content or action button -->
+<button mat-raised-button color="primary" [disabled]="!drivingLicence"  (click)="drivingLicenceVerify()" class="verify-button">Verify License</button>
+</mat-card>
+
+
+
+
+
+
+</div>
+
+

@@ -18,4 +18,7 @@ export class PanVerificationService {
   comprehensive(data:any){
     return this._http.post(`${environment.apiUrl}`+"pan/comprehensive",data);
   }
+  verifyAadharNumber(data:any){
+    return this._http.post(`${environment.apiUrl}`+"aadhar/validatewithnumber",data);
+  }
 }

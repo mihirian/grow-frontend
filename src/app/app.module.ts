@@ -24,6 +24,20 @@ import { DrawerComponent } from './common/drawer/drawer.component';
 import { HomeComponent } from './components/home/home.component';
 import { PanVerificationComponent } from './components/pan-verification/pan-verification.component';
 import { DynamicDataComponent } from './common/dynamic-data/dynamic-data.component';
+import { AadharVerificationComponent } from './components/aadhar-verification/aadhar-verification.component';
+import { DrivingLicenseComponent } from './components/driving-license/driving-license.component';
+import { VoterIdVerificationComponent } from './components/voter-id-verification/voter-id-verification.component';
+import { PassportVerificationComponent } from './components/passport-verification/passport-verification.component';
+import { FssaiVerificationComponent } from './components/fssai-verification/fssai-verification.component';
+import { IecVerificationComponent } from './components/iec-verification/iec-verification.component';
+import { McaVerificationComponent } from './components/mca-verification/mca-verification.component';
+import { GstVerificationComponent } from './components/gst-verification/gst-verification.component';
+import { TanVerificationComponent } from './components/tan-verification/tan-verification.component';
+import { LeiVerificationComponent } from './components/lei-verification/lei-verification.component';
+import { ShopEstablishmentVerificationComponent } from './components/shop-establishment-verification/shop-establishment-verification.component';
+import { RcVerificationComponent } from './components/rc-verification/rc-verification.component';
+import { BankAccountVerificationComponent } from './components/bank-account-verification/bank-account-verification.component';
+import { EmailCheckerVerificationComponent } from './components/email-checker-verification/email-checker-verification.component';
 
 
 @NgModule({
@@ -33,7 +47,21 @@ import { DynamicDataComponent } from './common/dynamic-data/dynamic-data.compone
     DrawerComponent,
     HomeComponent,
     PanVerificationComponent,
-    DynamicDataComponent
+    DynamicDataComponent,
+    AadharVerificationComponent,
+    DrivingLicenseComponent,
+    VoterIdVerificationComponent,
+    PassportVerificationComponent,
+    FssaiVerificationComponent,
+    IecVerificationComponent,
+    McaVerificationComponent,
+    GstVerificationComponent,
+    TanVerificationComponent,
+    LeiVerificationComponent,
+    ShopEstablishmentVerificationComponent,
+    RcVerificationComponent,
+    BankAccountVerificationComponent,
+    EmailCheckerVerificationComponent
   ],
   imports: [
     BrowserModule,
