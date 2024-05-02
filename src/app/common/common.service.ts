@@ -12,4 +12,7 @@ export class CommonService {
   verifydrivingLicense(data:any){
     return this._http.post(`${environment.apiUrl}`+"common/drivinglicenseVerif",data);
   }
+  verifyvoterID(data:any){
+    return this._http.post(`${environment.apiUrl}`+"common/voterIdVerif",data);
+  }
 }

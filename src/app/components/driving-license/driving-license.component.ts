@@ -10,19 +10,23 @@ import { DynamicDataComponent } from '../../common/dynamic-data/dynamic-data.com
   styleUrls: ['./driving-license.component.css']
 })
 export class DrivingLicenseComponent {
-  drivingLicence: any;
+  drivingLicence: any; // Holds the license number as a string
   dob: any; // This will hold the date object
   formattedDOB: any; // This will hold the formatted string
-  maxDate: Date = new Date();
-  startDate: Date = new Date(1990, 0, 1);
+  maxDate: Date = new Date(); // Maximum date for DOB picker
+  startDate: Date = new Date(1990, 0, 1); // Start date for DOB picker
 
-  constructor(public dialog: MatDialog, private _commonService: CommonService, private _snackBar: MatSnackBar) {
+  constructor(
+    public dialog: MatDialog, 
+    private _commonService: CommonService, 
+    private _snackBar: MatSnackBar
+  ) {
     this.setInitialDOB();
   }
 
   setInitialDOB() {
     const defaultDOB = new Date();
-    defaultDOB.setFullYear(defaultDOB.getFullYear() - 20);
+    defaultDOB.setFullYear(defaultDOB.getFullYear() - 20); // Set default DOB to 20 years ago
     this.dob = defaultDOB;
     this.formattedDOB = this.formatDate(this.dob);
   }
@@ -31,7 +35,12 @@ export class DrivingLicenseComponent {
     const y = date.getFullYear();
     const m = date.getMonth() + 1; // Months are zero indexed
     const d = date.getDate();
-    return `${y}/${m.toString().padStart(2, '0')}/${d.toString().padStart(2, '0')}`;
+    return `${y}-${m.toString().padStart(2, '0')}-${d.toString().padStart(2, '0')}`;
+  }
+
+  onDOBChange(newDOB: Date): void {
+    this.dob = newDOB;
+    this.formattedDOB = this.formatDate(newDOB);
   }
 
   drivingLicenceVerify() {
@@ -45,7 +54,7 @@ export class DrivingLicenseComponent {
           this._snackBar.open(res.message.toString(), 'close', { duration: 3000 });
         }
       },
-      (error) => {
+      (error:any) => {
         this._snackBar.open(error.toString(), 'close', { duration: 3000 });
       }
     );
@@ -56,6 +65,7 @@ export class DrivingLicenseComponent {
       data: { data: data },
       disableClose: true,
     });
+
     dialogRef.componentInstance.closemodal.subscribe(() => {
       dialogRef.close();
     });

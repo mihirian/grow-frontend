@@ -17,11 +17,13 @@ style="margin-top: 35px; margin-right: 25px"
 </mat-form-field>
 
 <mat-form-field appearance="outline" class="dob-input">
-    <mat-label>Enter Date of Birth</mat-label>
-    <input matInput [matDatepicker]="picker" placeholder="YYYY/MM/DD" [(ngModel)]="dob" [max]="maxDate">
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker [startAt]="startDate"></mat-datepicker>
-  </mat-form-field>
+  <mat-label>Enter Date of Birth</mat-label>
+  <input matInput [matDatepicker]="picker" placeholder="YYYY/MM/DD" [(ngModel)]="dob" [max]="maxDate"
+         (ngModelChange)="onDOBChange($event)">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker [startAt]="startDate"></mat-datepicker>
+</mat-form-field>
+
 
 <!-- Additional content or action button -->
 <button mat-raised-button color="primary" [disabled]="!drivingLicence"  (click)="drivingLicenceVerify()" class="verify-button">Verify License</button>
